@@ -1,0 +1,612 @@
+.topcontent {
+  background-color: #05111d;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  scrollbar-width: none;
+  /* Firefox */
+  cursor: url(../images/music-note.png),auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+}
+
+.loading-div {
+  width: 1920px;
+  height: 1000px;
+  background-color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  color: #555;
+  overflow: hidden;
+  text-align: center;
+}
+
+.loading-div::before {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.wrapper {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  color: #887d5d;
+  z-index: 100px;
+}
+
+.wrapper-title {
+  padding: 10px;
+  margin-right: 20%;
+  display: inline;
+  float: left;
+}
+
+.wrapper-button {
+  background-color: transparent;
+  color: #887d5d;
+  border: none;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  padding-right: 5%;
+  vertical-align: middle;
+  display: inline;
+  float: left;
+  padding-top: 25px;
+  text-decoration:none;
+}
+
+.wrapper-button:hover {
+  color: white;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-line: 3px;
+}
+
+.News {
+  width: 100%;
+  height: 1000px;
+  /* background: url("../images/violin.jpg") no-repeat center center fixed ;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}
+.NewsLogo {
+  height: 50px;
+  margin-top: 18%;
+  margin-left: 80px;
+  float: left;
+}
+.billboard {
+  margin: 0;
+  width: 30%;
+  height: 300px;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: transparent;
+  display: inline-block;
+  margin-left: 15vh;
+  padding-top: 5%;
+  /* border: 10px solid #887d5d;
+  transition: all 0.2s; */
+}
+
+/* .billboard:hover {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+  margin-top: 10px;
+} */
+
+.news {
+  border: 1px none #000;
+  font-family: fantasy;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  font-size: 1.2vw;
+  line-height: 1em;
+  letter-spacing: 2px;
+  height: 10%;
+  text-transform: uppercase;
+  float: right;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.news_text:hover {
+  text-decoration: underline;
+}
+
+.date-col {
+  display: inline-block;
+  width: 20%;
+  height: 10%;
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 48px;
+  float: left;
+  margin-bottom: 30px;
+}
+
+.date {
+  font-family: Georgia, serif;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  line-height: 1em;
+  letter-spacing: 0px;
+}
+
+.topcontent .News .music {
+  margin: 0;
+  width: 50%;
+  height: 600px;
+  margin-top: 100px;
+  background-color: transparent;
+  display: inline-block;
+  float: right;
+}
+
+.topcontent .News .music .panel-line.panel-line--0 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 0;
+  width: 70vh;
+  height: 1px;
+}
+
+.topcontent .News .music .panel-line.panel-line--0 span {
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-top: 0%;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.topcontent .News .music .panel-line.panel-line--1 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 10vh;
+  width: 70vh;
+  height: 1px;
+}
+
+.topcontent .News .music .panel-line.panel-line--1 span {
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-top: 0%;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.topcontent .News .music .panel-line.panel-line--2 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 20vh;
+  width: 70vh;
+  height: 1px;
+}
+
+.topcontent .News .music .panel-line.panel-line--2 span {
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: 0%;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.topcontent .News .music .panel-line.panel-line--3 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 30vh;
+  width: 70vh;
+  height: 1px;
+}
+
+.topcontent .News .music .panel-line.panel-line--3 span {
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--4 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 40vh;
+  width: 70vh;
+  height: 1px
+}
+
+.topcontent .News .music .panel-line.panel-line--4 span {
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--5 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 50vh;
+  width: 70vh;
+  height: 1px
+}
+
+.topcontent .News .music .panel-line.panel-line--5 span {
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--6 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 60vh;
+  width: 70vh;
+  height: 1px
+}
+
+.topcontent .News .music .panel-line.panel-line--6 span {
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--7 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 70vh;
+  width: 70vh;
+  height: 1px
+}
+
+.topcontent .News .music .panel-line.panel-line--7 span {
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--8 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 80vh;
+  width: 70vh;
+  height: 1px
+}
+
+.topcontent .News .music .panel-line.panel-line--8 span {
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--9 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 90vh;
+  width: 70vh;
+  height: 1px
+}
+
+.topcontent .News .music .panel-line.panel-line--9 span {
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--10 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 100vh;
+  width: 70vh;
+  height: 1px
+}
+
+.topcontent .News .music .panel-line.panel-line--10 span {
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--11 {
+  display: block;
+  position: absolute;
+  right: 88.4vh;
+  width: 1px;
+  height: 100vh;
+  margin-top: 0
+}
+
+.topcontent .News .music .panel-line.panel-line--11 span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--12 {
+  display: block;
+  position: absolute;
+  right: 83.5vh;
+  margin-top: 0;
+  width: 1px;
+  height: 100vh
+}
+
+.topcontent .News .music .panel-line.panel-line--12 span {
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-line.panel-line--13 {
+  display: block;
+  position: absolute;
+  right: 18.5vh;
+  width: 1px;
+  height: 100vh;
+  margin-top: 0
+}
+
+.topcontent .News .music .panel-line.panel-line--13 span {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: white
+}
+
+.topcontent .News .music .panel-list {
+  position: absolute;
+  right: 18.5vh;
+  margin-top: 0
+}
+
+.topcontent .News .music .panel-list .list-item {
+  display: flex;
+  height: 10vh
+}
+
+.topcontent .News .music .panel-list .list-item .item-num {
+  position: relative;
+  width: 4vh;
+  height: 100%
+}
+
+.topcontent .News .music .panel-list .list-item .item-num img {
+  position: relative;
+  margin-top: 1vh;
+}
+
+.topcontent .News .music .panel-list .list-item .item-title {
+  position: relative;
+  width: 65vh;
+  height: 100%;
+  overflow: hidden
+}
+
+.topcontent .News .music .panel-list .list-item .item-title span {
+  position: absolute;
+  left: 0;
+  margin-top: 1.7vh;
+  height: 10vh
+}
+
+.topcontent .News .music .panel-list .list-item .item-title span a {
+  display: flex;
+  height: 100%;
+  filter: brightness(60%);
+  transition: all 0.125s linear 0s
+}
+
+@media screen and (min-width: 469px) {
+  .topcontent .News .music .panel-list .list-item .item-title span a:hover {
+    filter: brightness(100%);
+    transform: skewX(-30deg);
+    transform-origin: center bottom
+  }
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(1) .item-title span {
+  animation: ticker-x1 9s linear infinite
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(2) .item-title span {
+  animation: ticker-x2 10s linear infinite
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(3) .item-title span {
+  animation: ticker-x3 9s linear infinite
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(4) .item-title span {
+  animation: ticker-x4 10s linear infinite
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(5) .item-title span {
+  animation: ticker-x5 10s linear infinite
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(6) .item-title span {
+  animation: ticker-x6 10s linear infinite
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(7) .item-title span {
+  animation: ticker-x7 9s linear infinite
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(8) .item-title span {
+  animation: ticker-x8 10s linear infinite
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(9) .item-title span {
+  animation: ticker-x9 9s linear infinite
+}
+
+.topcontent .News .music .panel-list .list-item:nth-of-type(10) .item-title span {
+  animation: ticker-x10 10s linear infinite
+}
+
+@keyframes ticker-x1 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-87.1vh, 0)
+  }
+}
+
+@keyframes ticker-x2 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-73vh, 0)
+  }
+}
+
+@keyframes ticker-x3 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-96.9vh, 0)
+  }
+}
+
+@keyframes ticker-x4 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-70.6vh, 0)
+  }
+}
+
+@keyframes ticker-x5 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-92.8vh, 0)
+  }
+}
+
+@keyframes ticker-x6 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-84.9vh, 0)
+  }
+}
+
+@keyframes ticker-x7 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-71vh, 0)
+  }
+}
+
+@keyframes ticker-x8 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-101.2vh, 0)
+  }
+}
+
+@keyframes ticker-x9 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-87.3vh, 0)
+  }
+}
+
+@keyframes ticker-x10 {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+      transform: translate(-88.5vh, 0)
+  }
+}
+
+

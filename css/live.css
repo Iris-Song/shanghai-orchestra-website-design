@@ -1,0 +1,42 @@
+.Live {
+    height: 620px;
+    width: 8000px;
+    /* 上右下左 */
+    background-color: rgb(17,28,40);
+    border-radius: 3px;
+    white-space:nowrap;
+    overflow-y: hidden; 
+    scrollbar-width: none; /* Firefox */
+    
+}
+.Live::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+}
+.Live .single-picture{
+    height: 500px;
+    width:600px;
+    background-color:transparent;
+    float:left;
+    margin-top: 10px;
+    margin-left :50px;
+}
+
+.Live .runpic{
+    animation: ticker-pic 40s linear infinite;
+}
+
+@keyframes ticker-pic {
+    0% {
+      transform: translate(0, 0)
+    }
+  
+    100% {
+        transform: translate(-388vh, 0)
+    }
+}
+
+.footer{
+    color:#8b7d59;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}

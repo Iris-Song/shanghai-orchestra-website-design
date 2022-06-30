@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanghai Orchestra</title>
+    <script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/live.css">
+    <link rel="stylesheet" href="https://daneden.github.io/animate.css/">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+
+<body>
+    <div class="loading-div">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw "></i>
+        <span class="sr-only">Loading...</span>
+    </div>
+    <div class="topcontent">
+        <div class="wrapper">
+            <img class="wrapper-title" src="images/1-title.png" width="10%">
+            <a href="#cal-anchor" class="wrapper-button">Calendar</a>
+            <a href="#news-anchor" class="wrapper-button">News</a>
+            <a href="#classic-anchor" class="wrapper-button">Classic</a>
+            <a href="#live-anchor" class="wrapper-button">Live</a>
+        </div>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1920 1080" enable-background="new 0 0 1920 1080"
+            xml:space="preserve">
+            <image id="1-building" width="100%" height="100%" x="0" y="0" href="images/1-building.png">
+                <animate attributeType="opacticy" attributeName="opacity" from="0" to="1" dur="5s" fill="freeze" />
+            </image>
+            <image id="1-title" width="30%" height="30%" x="100" y="50" href="images/1-title.png">
+                <animate attributeType="opacticy" attributeName="opacity" from="0" to="1" dur="5s" fill="freeze" />
+                <animateMotion path="M 100 180 L 100 80" dur="5s" fill="freeze" />
+            </image>
+            <image id="1-left" width="60%" height="60%" x="0" y="150" href="images/1-left.png">
+                <animateMotion path="M -200 150 L 0 150" dur="5s" fill="freeze" />
+            </image>
+        </svg>
+
+
+
+        <div id="cal-anchor"></div>
+        <div class="cal-logo">
+            <image src="images/calendar.png" style="width: 240px;margin-bottom :30px;"></image>
+        </div>
+        <ul class="calendar-layout" id="calday">
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t1">
+                    <span class="calendar-time">19:15<br></span>
+                    复兴中路1380号<br>
+                    小提琴：王俊皓 <br>
+                    低音提琴：张凯旋 <br>
+                    钢琴：叶青</span>
+                <text class="calendar-date">「肆月壹日」</text><br>
+                <text class="calendar-text">最小与最大——<br>小提琴与低音提琴的室内乐</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t2">
+                    <span class="calendar-time">20:00<br></span>
+                    复兴中路1380号<br>
+                    指挥：张洁敏<br>
+                    女中音：朱慧玲<br>
+                    上海交响乐团 </span>
+                </span>
+                <text class="calendar-date">「肆月叁日」</text><br>
+                <text class="calendar-text">张洁敏与朱慧玲演绎<br>瓦格纳《韦森东克歌曲》</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t3">
+                    <span class="calendar-time">19:15<br></span>
+                    复兴中路1380号<br>
+                    单簧管：戴乐 李聪<br>
+                    双簧管：咸正凖<br>
+                    大管：陈定远 陈瑞婕<br>
+                    圆号：彼得·所罗门
+                </span>
+                <text class="calendar-date">「肆月伍日」</text><br>
+                <text class="calendar-text">贝多芬的木管六重奏</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t4">
+                    <span class="calendar-time">18:30<br></span>
+                    复兴中路1380号<br>
+                    小提琴：武奥列<br>
+                    中提琴：王冠<br>
+                    大提琴：周润青<br>
+                    钢琴、主持：薛源</span>
+                <text class="calendar-date">「肆月柒日」</text><br>
+                <text class="calendar-text">幽默</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t5">
+                    <span class="calendar-time">19:15<br></span>
+                    复兴中路1380号<br>
+                    中提琴：刘念<br>
+                    双簧管：开赛<br>
+                    上海乐队学院学生
+                </span>
+                <text class="calendar-date">「肆月捌日」</text><br>
+                <text class="calendar-text">上海乐队学院
+                    <br>室内乐艺术节（一）</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t6">
+                    <span class="calendar-time">19:15<br></span>
+                    复兴中路1380号<br>
+                    小提琴：武奥列<br>
+                    中提琴：俞海锋<br>
+                    大提琴：周润青<br>
+                    吉他：张雄关<br> 
+                    贝斯：田欣<br>
+                    鼓：徐之曈<br>
+                    钢琴、主持：薛源<br>
+                    </span>
+                <text class="calendar-date">「肆月拾贰日」</text><br>
+                <text class="calendar-text">古典与爵士</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t7">
+                    <span class="calendar-time">19:15<br></span>
+                    复兴中路1380号<br>
+                    小提琴：李文婷<br>
+                    中提琴：施贞莉<br>
+                    大提琴：赵丽媛<br>
+                </span>
+                <text class="calendar-date">「肆月拾捌日」</text><br>
+                <text class="calendar-text">时空的对话——<br>莫扎特的「狩猎」和「春天」</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t8">
+                    <span class="calendar-time">19:15<br></span>
+                    复兴中路1380号<br>
+                    ---------
+                   </span>
+                <text class="calendar-date">「肆月贰拾伍日」</text><br>
+                <text class="calendar-text">春天的会面——<br>莫扎特的音乐盲盒</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t9">
+                    <span class="calendar-time">19:15<br></span>
+                    复兴中路1380号<br>
+                    小提琴：李沛<br>
+                    大提琴：朱琳<br>
+                    钢琴：左章
+                    </span>
+                <text class="calendar-date">「肆月贰拾柒日」</text><br>
+                <text class="calendar-text">舒伯特与勃拉姆斯的<br>钢琴三重奏</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t10">
+                    <span class="calendar-time">20:00<br></span>
+                    复兴中路1380号<br>
+                    指挥：俞极<br>
+                    小提琴：竺玟佳<br>
+                    上海交响乐团<br>
+                    </span>
+                <text class="calendar-date">「肆月贰拾捌日」</text><br>
+                <text class="calendar-text">完全西贝柳斯</text>
+            </div>
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t11">
+                    <span class="calendar-time">19:15<br></span>
+                    复兴中路1380号<br>
+                    中提琴：刘念<br>
+                    双簧管：开赛<br>
+                    上海乐队学院学生<br>
+                </span>
+                <text class="calendar-date">「肆月贰拾玖日」</text><br>
+                <text class="calendar-text">上海乐队学院
+                    <br>室内乐艺术节（二）</text>
+            </div>
+
+            <div class="calendar-day">
+                <span class="calendar-tooltip" id="t12">
+                    <span class="calendar-time">20:00<br></span>
+                    复兴中路1380号<br>
+                    第一小提琴：李伟纲<br>
+                    第二小提琴：于翔<br>
+                    中提琴：李宏刚
+                    </span>
+                <text class="calendar-date">「上交室内乐」</text><br>
+                <text class="calendar-text">上海四重奏</text>
+            </div>
+            <div class="bar">
+                <span class="base"></span>
+                <span class="progress">
+                    <span class="img_wrap">
+                        <img src="images/scroll_calendar.svg" alt="">
+                    </span>
+                </span>
+            </div>
+        </ul>
+
+        <div class="News" id="news-anchor">
+            <div class="NewsLogo">
+                <image src="images/news.png" style="width: 150px;margin-bottom :100px;"></image>
+            </div>
+            <div class="music">
+                <div class="panel-line panel-line--0"><span></span></div>
+                <div class="panel-line panel-line--1"><span></span></div>
+                <div class="panel-line panel-line--2"><span></span></div>
+                <div class="panel-line panel-line--3"><span></span></div>
+                <div class="panel-line panel-line--4"><span></span></div>
+                <div class="panel-line panel-line--5"><span></span></div>
+                <div class="panel-line panel-line--6"><span></span></div>
+                <div class="panel-line panel-line--7"><span></span></div>
+                <div class="panel-line panel-line--8"><span></span></div>
+                <div class="panel-line panel-line--9"><span></span></div>
+                <div class="panel-line panel-line--10"><span></span></div>
+                <div class="panel-line panel-line--11"><span></span></div>
+                <div class="panel-line panel-line--12"><span></span></div>
+                <div class="panel-line panel-line--13"><span></span></div>
+                <div class="panel-list">
+                    <audio id='music1' src='music/music1.mp3'></audio>
+                    <audio id='music2' src='music/music2.mp3'></audio>
+                    <audio id='music3' src='music/music3.mp3'></audio>
+                    <audio id='music4' src='music/music4.mp3'></audio>
+                    <audio id='music5' src='music/music5.mp3'></audio>
+                    <audio id='music6' src='music/music6.mp3'></audio>
+                    <audio id='music7' src='music/music7.mp3'></audio>
+                    <audio id='music8' src='music/music8.mp3'></audio>
+                    <audio id='music9' src='music/music9.mp3'></audio>
+                    <audio id='music10' src='music/music10.mp3'></audio>
+                    <div class="list-item" data-index="1" onmouseover="PlaySound('music1')"
+                        onmouseout="StopSound('music1')">
+                        <div class="item-num">
+                            <img src="images/num-1.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-1.png">
+                                    <img src="images/music-1.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-item" data-index="2" onmouseover="PlaySound('music2')"
+                        onmouseout="StopSound('music2')">
+                        <div class="item-num">
+                            <img src="images/num-2.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-2.png">
+                                    <img src="images/music-2.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-item" data-index="3" onmouseover="PlaySound('music3')"
+                        onmouseout="StopSound('music3')">
+                        <div class="item-num">
+                            <img src="images/num-3.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-3.png">
+                                    <img src="images/music-3.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-item" data-index="4" onmouseover="PlaySound('music4')"
+                        onmouseout="StopSound('music4')">
+                        <div class="item-num">
+                            <img src="images/num-4.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-4.png">
+                                    <img src="images/music-4.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-item" data-index="5" onmouseover="PlaySound('music5')"
+                        onmouseout="StopSound('music5')">
+                        <div class="item-num">
+                            <img src="images/num-5.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-5.png">
+                                    <img src="images/music-5.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-item" data-index="6" onmouseover="PlaySound('music6')"
+                        onmouseout="StopSound('music6')">
+                        <div class="item-num">
+                            <img src="images/num-6.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-6.png">
+                                    <img src="images/music-6.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-item" data-index="7" onmouseover="PlaySound('music7')"
+                        onmouseout="StopSound('music7')">
+                        <div class="item-num">
+                            <img src="images/num-7.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-7.png">
+                                    <img src="images/music-7.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-item" data-index="8" onmouseover="PlaySound('music8')"
+                        onmouseout="StopSound('music8')">
+                        <div class="item-num">
+                            <img src="images/num-8.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-8.png">
+                                    <img src="images/music-8.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-item" data-index="9" onmouseover="PlaySound('music9')"
+                        onmouseout="StopSound('music9')">
+                        <div class="item-num">
+                            <img src="images/num-9.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-9.png">
+                                    <img src="images/music-9.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-item" data-index="10" onmouseover="PlaySound('music10')"
+                        onmouseout="StopSound('music10')">
+                        <div class="item-num">
+                            <img src="images/num-10.png" width="80%" height="80%">
+                        </div>
+                        <div class="item-title">
+                            <span>
+                                <a href="" target="_blank">
+                                    <img src="images/music-10.png">
+                                    <img src="images/music-10.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="billboard">
+                <div class="date-col date" style="position:relative;display:inline-block;">3.21</div>
+                <div class="news news_text" style="position:relative;display:inline-block;">[公告] 近期演出取消，票务中心暂停...</div>
+                <div class="date-col date" style="position:relative;display:inline-block;">3.23</div>
+                <div class="news news_text" style="position:relative;display:inline-block;">[公告] 近期演出取消，票务中心服务...</div>
+                <div class="date-col date" style="position:relative;display:inline-block;">3.28</div>
+                <div class="news news_text" style="position:relative;display:inline-block;">[公告] 原定7月13日，14日演出取消...
+                </div>
+                <div class="date-col date" style="position:relative;display:inline-block;">4.2</div>
+                <div class="news news_text" style="position:relative;display:inline-block;">[公告] 为感谢广大听众与支持者，乐...</div>
+                <br>
+                <div class="news news_text" style="position:relative;display:inline-block;float:left;">查看更多...</div>
+            </div>
+        </div>
+
+        <div class="Classic" id="classic-anchor">
+            <div class="classic_bg">
+                <div class="point_area office1" id="point_area" style="position: absolute;width: 1150px;height: 567px;display:none">
+                    <img class="ripple_small" src="images/map_circle_ripple_small.svg" alt="">
+                    <img class="ripple_small" src="images/map_circle_ripple_small.svg" alt="">
+                    <img class="ripple_small" src="images/map_circle_ripple_small.svg" alt="">
+                    <img class="ripple_small" src="images/map_circle_ripple_small.svg" alt="">
+                    <img class="ripple_small" src="images/map_circle_ripple_small.svg" alt="">
+                    <img class="ripple_small" src="images/map_circle_ripple_small.svg" alt="">
+                    <img class="bigger" src="images/map_circle_bigger.svg" alt="">
+                    <svg class="ripple" viewBox="0 0 471.26 471.58" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" stroke="#fff" transform="translate(-.01 .01)">
+                            <path d="m235.64 177a58.82 58.82 0 1 1 -58.78 58.86 58.81 58.81 0 0 1 58.78-58.86z"
+                                opacity=".7" />
+                            <path
+                                d="m235.64 118.14a117.65 117.65 0 1 1 -117.57 117.72v-.08a117.6 117.6 0 0 1 117.56-117.64z"
+                                opacity=".7" />
+                            <path
+                                d="m235.64 59.31c97.36 0 176.36 79.01 176.36 176.47s-79 176.47-176.36 176.47-176.35-79-176.35-176.47 79-176.47 176.35-176.47z"
+                                opacity=".7" />
+                            <path
+                                d="m235.64.49c129.86 0 235.13 105.34 235.13 235.29s-105.27 235.29-235.13 235.29-235.13-105.34-235.13-235.29 105.27-235.29 235.13-235.29z"
+                                opacity=".7" />
+                        </g>
+                    </svg>
+                </div>
+                <!-- <div class="areaname_area font2 office1">
+                    <div><span>Shanghai</span></div>
+                    <div><span>Tokyo</span></div>
+                    <div><span>London</span></div>
+                    <div><span>NewYork</span></div>
+                    <div><span>Korea</span></div>
+                    <div><span>Hong Kong</span></div>
+                </div> -->
+            </div>
+            <div class="Shanghai">
+                <div class="classic_child" id="Shanghai">
+                    <div class="child_sec child_sec1 sec_type2">
+                        <h3 class="font1">
+                            捷豹上海交响音乐厅 · 主厅
+                        </h3>
+                        <ul class="font3">
+                            <li>
+                                <div class="tit"><span>音乐会</span></div>
+                                <div class="txt">完全西贝柳斯</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>参演人员</span></div>
+                                <div class="txt">指挥：俞极 <br>小提琴：竺玟佳 <br>上海交响乐团</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>时间</span></div>
+                                <div class="txt">2022-04-22 20:00 周五</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>剧目</span></div>
+                                <div class="txt">
+                                    <div>
+                                        西贝柳斯：d小调小提琴协奏曲，作品47，具有浓郁的北欧风情，悲壮的情绪中洋溢着坚韧与乐观，是芬兰人民族性的写照
+                                        <br>西贝柳斯：D大调第二交响曲，作品43，“田园”，庄严而活泼，是一出无词的史诗巨著
+                                    </div>
+                                    <div class="font2 map"><a
+                                            href="https://www.google.com/maps/place/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%93%8D%E4%B9%90%E5%9B%A2%E9%9F%B3%E4%B9%90%E5%8E%85/@31.2114476,121.4504593,17z/data=!3m1!4b1!4m5!3m4!1s0x35b27aaeb83b57fb:0x40e0bbb8d50ccb32!8m2!3d31.211443!4d121.452648"
+                                            blank="_blank"><span>Google map</span></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="Tokyo">
+                <div class="classic_child" id="Tokyo">
+                    <div class="child_sec child_sec1 sec_type2">
+                        <h3 class="font1">
+                            三得利东京音乐厅 · 主厅
+                        </h3>
+                        <ul class="font3">
+                            <li>
+                                <div class="tit"><span>音乐会</span></div>
+                                <div class="txt">遇见浪漫主义</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>参演人员</span></div>
+                                <div class="txt">指挥：俞极 <br>小提琴：竺玟佳 <br>上海交响乐团</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>时间</span></div>
+                                <div class="txt">2014-04-17 15:00    周日</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>剧目</span></div>
+                                <div class="txt">
+                                    <div>舒伯特 艺术歌曲D. 257《野玫瑰》<br class="pc">
+                                        舒伯特D大调《军队进行曲》Op. 51<br class="pc">
+                                        门德尔颂 无言歌Op. 62, No. 6《春之歌》<br class="pc">
+                                    </div>
+                                    <div class="font2 map"><a
+                                            href="https://www.google.com/maps/place/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%93%8D%E4%B9%90%E5%9B%A2%E9%9F%B3%E4%B9%90%E5%8E%85/@31.2114476,121.4504593,17z/data=!3m1!4b1!4m5!3m4!1s0x35b27aaeb83b57fb:0x40e0bbb8d50ccb32!8m2!3d31.211443!4d121.452648"
+                                            blank="_blank"><span>Google map</span></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="London">
+                <div class="classic_child" id="London">
+                    <div class="child_sec child_sec1 sec_type2">
+                        <h3 class="font1">
+                            伦敦皇家音乐厅 · 主厅
+                        </h3>
+                        <ul class="font3">
+                            <li>
+                                <div class="tit"><span>音乐会</span></div>
+                                <div class="txt">意大利之旅Aus Italien</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>参演人员</span></div>
+                                <div class="txt">指挥：俞极 <br>小提琴：竺玟佳 <br>上海交响乐团</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>时间</span></div>
+                                <div class="txt">2015-04-22 20:00 周五</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>剧目</span></div>
+                                <div class="txt">
+                                    <div>佐尔丹•柯达伊：加兰塔舞曲Zoltán Kodály: Dances of Galanta<br class="pc">
+                                        吉里•保尔：圆号协奏曲JiříPauer: Horn Concerto<br class="pc">
+                                        理查•施特劳斯：交响幻想曲《意大利》，作品16  <br class="pc">
+                                    </div>
+                                    <div class="font2 map"><a
+                                            href="https://www.google.com/maps/place/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%93%8D%E4%B9%90%E5%9B%A2%E9%9F%B3%E4%B9%90%E5%8E%85/@31.2114476,121.4504593,17z/data=!3m1!4b1!4m5!3m4!1s0x35b27aaeb83b57fb:0x40e0bbb8d50ccb32!8m2!3d31.211443!4d121.452648"
+                                            blank="_blank"><span>Google map</span></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="NewYork">
+                <div class="classic_child" id="NewYork">
+                    <div class="child_sec child_sec1 sec_type2">
+                        <h3 class="font1">
+                            卡耐基纽约音乐厅 · 主厅
+                        </h3>
+                        <ul class="font3">
+                            <li>
+                                <div class="tit"><span>音乐会</span></div>
+                                <div class="txt">天鹅湖Swan Lake</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>参演人员</span></div>
+                                <div class="txt">指挥：俞极 <br>小提琴：竺玟佳 <br>上海交响乐团</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>时间</span></div>
+                                <div class="txt">2016-04-22 20:00 周五</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>剧目</span></div>
+                                <div class="txt">
+                                    <div>威廉退尔序曲William Tell Overture 安东尼奥·罗西尼作曲（意大利）——于1829年创作完成<br class="pc">
+                                        7.致爱丽丝Für Elise 贝多芬作曲（德国）——于1810年创作完成<br class="pc">
+                                        8.冬Winter 维瓦尔第作曲（意大利）——于1725年创作完成<br class="pc">
+                                    </div>
+                                    <div class="font2 map"><a
+                                            href="https://www.google.com/maps/place/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%93%8D%E4%B9%90%E5%9B%A2%E9%9F%B3%E4%B9%90%E5%8E%85/@31.2114476,121.4504593,17z/data=!3m1!4b1!4m5!3m4!1s0x35b27aaeb83b57fb:0x40e0bbb8d50ccb32!8m2!3d31.211443!4d121.452648"
+                                            blank="_blank"><span>Google map</span></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="Korea">
+                <div class="classic_child" id="Korea">
+                    <div class="child_sec child_sec1 sec_type2">
+                        <h3 class="font1">
+                            首尔艺术中心
+                        </h3>
+                        <ul class="font3">
+                            <li>
+                                <div class="tit"><span>音乐会</span></div>
+                                <div class="txt">四月是你的谎言</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>参演人员</span></div>
+                                <div class="txt">指挥：俞极 <br>小提琴：竺玟佳 <br>上海交响乐团</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>时间</span></div>
+                                <div class="txt">2022-04-22 20:00 周五</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>剧目</span></div>
+                                <div class="txt">
+                                    <div>肖邦：升c小调即兴幻想曲Op.66<br class="pc">
+                                        ショパン：幻想即興曲第4番嬰ハ短調op .66幻想即興曲<br class="pc">
+                                        Chopin：Impromptu No. 4 C Sharp -minor, Op.66 'Fantaisie-Impromptu'<br class="pc">
+                                        肖邦：g小调叙事曲Op. 23  No. 1<br class="pc">
+                                        ショパン：バラード第1番ト短調作品23<br class="pc">
+                                        Chopin：Ballad in G minor No. 1 Op. 23<br class="pc">西贝柳斯：D大调第二交响曲，作品43，“田园”，庄严而活泼，是一出无词的史诗巨著
+                                    </div>
+                                    <div class="font2 map"><a
+                                            href="https://www.google.com/maps/place/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%93%8D%E4%B9%90%E5%9B%A2%E9%9F%B3%E4%B9%90%E5%8E%85/@31.2114476,121.4504593,17z/data=!3m1!4b1!4m5!3m4!1s0x35b27aaeb83b57fb:0x40e0bbb8d50ccb32!8m2!3d31.211443!4d121.452648"
+                                            blank="_blank"><span>Google map</span></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="Hongkong">
+                <div class="classic_child" id="Hongkong">
+                    <div class="child_sec child_sec1 sec_type2">
+                        <h3 class="font1">
+                            香港文化中心
+                        </h3>
+                        <ul class="font3">
+                            <li>
+                                <div class="tit"><span>音乐会</span></div>
+                                <div class="txt">保卫黄河</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>参演人员</span></div>
+                                <div class="txt">指挥：俞极 <br>小提琴：竺玟佳 <br>上海交响乐团</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>时间</span></div>
+                                <div class="txt">2020-04-22 20:00 周五</div>
+                            </li>
+                            <li>
+                                <div class="tit"><span>剧目</span></div>
+                                <div class="txt">
+                                    <div>《保卫黄河》是《黄河大合唱》的第七乐章，由光未然、冼星海所创写成于中国抗日战争时期。该曲采用齐唱、轮唱的演唱形式，具有广泛的群众性，是抗日军民广为传播的一首歌曲。<br
+                                            
+                                    </div>
+                                    <div class="font2 map"><a
+                                            href="https://www.google.com/maps/place/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%93%8D%E4%B9%90%E5%9B%A2%E9%9F%B3%E4%B9%90%E5%8E%85/@31.2114476,121.4504593,17z/data=!3m1!4b1!4m5!3m4!1s0x35b27aaeb83b57fb:0x40e0bbb8d50ccb32!8m2!3d31.211443!4d121.452648"
+                                            blank="_blank"><span>Google map</span></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="Live" id="live-anchor">
+            <div class="LiveLogo">
+                <image src="images/live.png" style="width: 100px;margin-left: 560px;margin-top: 50px;"></image>
+            </div>
+            <ul class="runpic">
+                <div class="single-picture">
+                    <image src="images/imgshow1.jpg" style="width: 600px;height:400px"></image>
+                </div>
+                <div class="single-picture">
+                    <image src="images/imgshow2.jfif" style="width: 600px;height:400px"></image>
+                </div>
+                <div class="single-picture">
+                    <image src="images/imgshow3.jpg" style="width: 600px;height:400px"></image>
+                </div>
+                <div class="single-picture">
+                    <image src="images/imgshow4.jpg" style="width: 600px;height:400px"></image>
+                </div>
+                <div class="single-picture">
+                    <image src="images/imgshow5.jpg" style="width: 600px;height:400px"></image>
+                </div>
+                <div class="single-picture">
+                    <image src="images/imgshow1.jpg" style="width: 600px;height:400px"></image>
+                </div>
+                <div class="single-picture">
+                    <image src="images/imgshow2.jfif" style="width: 600px;height:400px"></image>
+                </div>
+                <div class="single-picture">
+                    <image src="images/imgshow3.jpg" style="width: 600px;height:400px"></image>
+                </div>
+                <div class="single-picture">
+                    <image src="images/imgshow4.jpg" style="width: 600px;height:400px"></image>
+                </div>
+                <div class="single-picture">
+                    <image src="images/imgshow5.jpg" style="width: 600px;height:400px"></image>
+                </div>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>contact us 404</p>
+            <p>宋子铭 张馨月 高琰婷 郑美欣</p>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/scroll_calendar.js"></script>
+    <script src="js/Utility.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/top.js"></script>
+</body>
+
+</html>

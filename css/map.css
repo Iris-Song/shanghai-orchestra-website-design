@@ -1,0 +1,328 @@
+.Classic {
+    width: 100%;
+    height: 6300px;
+    margin-left: 10px;
+    background: url(../images/map.svg);
+    background-size: 850px;
+    background-repeat: no-repeat;
+    background-position: 424px, 500px;
+    background-attachment: fixed;
+   
+}
+
+.Classic .classic_bg {
+    width: 60%;
+    float: right
+}
+
+.Classic .classic_bg .mp img {
+    /* width: 1000px;     */
+    margin-left: 5px;
+    margin-top: 125px;
+    /* margin-bottom: 300px; */
+
+}
+
+.Classic .classic_child {
+    /* padding-bottom: 100px; */
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-top: 100px;
+
+}
+
+.Classic .classic_child .child_sec {
+    margin-left: 61px;
+}
+
+.Classic .classic_child .child_sec.sec_type2 h3 {
+    font-size: 3rem;
+}
+
+.Classic .classic_child .child_sec.sec_type2 h3:before {
+    width: 7px;
+    height: 7px;
+    top: -5px;
+    margin-right: 10px;
+}
+
+.Classic .classic_child .child_sec.sec_type2 ul {
+    margin-top: 12px;
+    margin-bottom: 37px;
+}
+
+.Classic .classic_child .child_sec.sec_type2 ul li {
+    padding: 27px 10px 27px 30px;
+    width: 600px;
+}
+
+.Classic .classic_child .child_sec.sec_type2 ul li .tit {
+    width: 79px;
+}
+
+.Classic .classic_child .child_sec h3 {
+    font-size: 6rem;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: -.03em;
+}
+
+.Classic .classic_child .child_sec h3:before {
+    content: "";
+    background-color: #fff;
+    transform: rotate(45deg);
+    width: 13px;
+    height: 13px;
+    position: relative;
+    margin-right: 16px;
+    display: inline-block;
+    top: -12px;
+}
+
+.Classic .classic_child .child_sec ul {
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 74px;
+}
+
+.Classic .classic_child .child_sec ul li {
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, .2);
+    width: 600px;
+    display: flex;
+    margin-bottom: 1px;
+    padding: 35px 40px;
+}
+
+.Classic .classic_child .child_sec ul li .tit {
+    font-size: 19px;
+    display: table;
+    width: 35%;
+    line-height: 1.7;
+    float: left
+}
+
+.Classic .classic_child .child_sec ul li .tit span {
+    display: table-cell;
+}
+
+.Classic .classic_child .child_sec ul li .txt {
+    font-size: 20px;
+    line-height: 1.7;
+    width: 65%;
+    float: left;
+    margin-left: 40px;
+}
+
+.Classic .classic_child .child_sec ul li .map {
+    font-size: 1.3rem;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.Classic .classic_child .child_sec ul li a {
+    color: #fff;
+}
+
+.Classic .classic_child .child_sec ul li a:hover:after {
+    animation: hover_line 0.6s cubic-bezier(.77, 0, .175, 1) forwards;
+}
+
+.Classic .classic_child .child_sec ul li a:after {
+    content: "";
+    background-color: #fff;
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: relative;
+    top: -3px;
+}
+
+.Classic .classic_child .child_sec.sec_type2 h3 {
+    font-size: 3rem;
+}
+
+.Classic .classic_child .child_sec.sec_type2 h3:before {
+    width: 7px;
+    height: 7px;
+    top: -5px;
+    margin-right: 10px;
+}
+
+.Classic .classic_child .child_sec.sec_type2 ul {
+    margin-top: 12px;
+    margin-bottom: 37px;
+}
+
+.Classic .classic_child .child_sec.sec_type2 ul li {
+    padding: 27px 10px 27px 30px;
+    width: 600px;
+}
+
+.Classic .classic_child .child_sec.sec_type2 ul li .tit {
+    width: 79px;
+}
+
+@media screen and (max-width:1023px) {
+    .Classic .classic_child .child_sec.sec_type2 h3 {
+        font-size: 3rem;
+    }
+
+    .Classic .classic_child .child_sec.sec_type2 ul {
+        margin-top: 2px;
+    }
+
+    .Classic .classic_child .child_sec.sec_type2 ul li {
+        padding: 25px 28px;
+        width: 81%;
+    }
+
+    .Classic .classic_child .child_sec.sec_type2 ul li .tit {
+        width: 65px;
+    }
+}
+
+/* .Classic .classic_bg .point_area {
+    position: absolute;
+    width: 1150px;
+    height: 567px;
+} */
+.Classic .classic_bg .point_area img {
+    position: absolute;
+    margin-top: 250px;
+}
+
+.Classic .classic_bg .point_area .ripple_small {
+    width: 48px;
+    height: 48px;
+
+}
+
+.Classic .classic_bg .point_area .ripple_small:first-child {/*左四*/
+    left: 48.85%;
+    top: 8%;
+}
+
+.Classic .classic_bg .point_area .ripple_small:nth-child(2) {/*左六*/
+    left: 53.6%;
+    top: 3.2%;
+}
+
+.Classic .classic_bg .point_area .ripple_small:nth-child(3) {/*左二*/
+    left: 24.2%;
+    top: -4.8%;
+}
+
+.Classic .classic_bg .point_area .ripple_small:nth-child(4) {/*左一*/
+    left: 9.8%;
+    top: 1.48%;
+}
+
+.Classic .classic_bg .point_area .ripple_small:nth-child(5) {/*左五*/
+    left: 50.5%;
+    top: 3.2%;
+}
+
+.Classic .classic_bg .point_area .ripple_small:nth-child(6) {/*左三*/
+    left: 47.3%;
+    top: 11.4%;
+}
+
+.Classic .classic_bg .point_area .bigger {/*左四*/
+    width: 21px;
+    height: 21px;
+    left: 50%;
+    top: 10.2%;
+}
+
+@keyframes rader {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.Classic .classic_bg .point_area .ripple {
+    position: absolute;
+}
+
+.Classic .classic_bg .point_area .ripple path:nth-of-type(1) {
+    animation: rader 2s 0.2s infinite linear;
+}
+
+.Classic .classic_bg .point_area .ripple path:nth-of-type(2) {
+    animation: rader 2s 0.4s infinite linear;
+}
+
+.Classic .classic_bg .point_area .ripple path:nth-of-type(3) {
+    animation: rader 2s 0.6s infinite linear;
+}
+
+.Classic .classic_bg .point_area .ripple path:nth-of-type(4) {
+    animation: rader 2s 0.8s infinite linear;
+}
+
+.Classic .classic_bg .point_area .ripple {/*左四*/
+    width: 300px;
+    height: 300px;
+    left: 37.8%;
+    top: 30%;
+}
+
+.Classic .classic_bg .point_area.office2 .ripple {/*左六*/
+    left: 42.7%;
+    top: 25%;
+}
+
+.Classic .classic_bg .point_area.office2 .bigger {/*左六*/
+    left: 54.8%;
+    top: 5.6%;
+}
+
+.Classic .classic_bg .point_area.office3 .ripple {/*左二*/
+    left: 13%;
+    top: 17%;
+}
+
+.Classic .classic_bg .point_area.office3 .bigger {/*左二*/
+    left: 25.3%;
+    top: -2.1%;
+}
+
+.Classic .classic_bg .point_area.office4 .ripple {/*左一*/
+    left: -1%;
+    top: 22.8%;
+}
+
+.Classic .classic_bg .point_area.office4 .bigger {/*左一*/
+    left: 11%;
+    top: 4%;
+}
+
+.Classic .classic_bg .point_area.office5 .ripple {/*左五*/
+    left: 39.5%;
+    top: 25%;
+}
+
+.Classic .classic_bg .point_area.office5 .bigger {/*左五*/
+    left: 51.6%;
+    top: 6%;
+}
+
+.Classic .classic_bg .point_area.office6 .ripple {/*左三*/
+    left: 36.3%;
+    top: 32.5%;
+}
+
+.Classic .classic_bg .point_area.office6 .bigger {/*左三*/
+    left: 48.5%;
+    top: 13.7%;
+}
